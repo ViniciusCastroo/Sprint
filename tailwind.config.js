@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'unbounded': ['Unbounded', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+        customGray: '#333333',
       },
     },
   },
