@@ -37,9 +37,9 @@ const Footer = () => {
                 <div className="social-media flex flex-col items-center flex-1">
                     <h3 className="mb-2 font-Montserrat">Siga-nos:</h3>
                     <div className="icons flex justify-center mb-5">
-                        <a href="#"><img src="Assets/tiktok.svg" alt="Tiktok" className="w-10 h-10 mx-2" /></a>
-                        <a href="#"><img src="Assets/x-twitter.svg" alt="Twitter" className="w-10 h-10 mx-2" /></a>
-                        <a href="#"><img src="Assets/instagram.svg" alt="Instagram" className="w-10 h-10 mx-2" /></a>
+                        <a href="#"><img src="tiktok.svg" alt="Tiktok" className="w-10 h-10 mx-2" /></a>
+                        <a href="#"><img src="x-twitter.svg" alt="Twitter" className="w-10 h-10 mx-2" /></a>
+                        <a href="#"><img src="instagram.svg" alt="Instagram" className="w-10 h-10 mx-2" /></a>
                     </div>
                     <div className="newsletter flex items-center">
                         <form id="TurboEmail" className="flex">

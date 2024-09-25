@@ -18,97 +18,98 @@ export default function Home() {
             </section>
 
             {/* Jogos Section */}
-            <section className="  jogos text-center py-5" id="jogos">
-                <div className="title-container1 flex items-center justify-center mb-5 px-36">
-                    <h1 className="font-unbounded text-3xl font-light font-Unbounded">Jogos</h1>
+                <section className="jogos text-center py-5" id="jogos">
+        <div className="title-container1 flex items-center justify-center mb-5 px-36">
+            <h1 className="font-unbounded text-3xl font-light">Jogos</h1>
+        </div>
+        <div className="font-poppins cards-container flex flex-wrap justify-center gap-8">
+            {/* Card Roleta */}
+            <div className="card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-sm">
+                <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
+                    <span className="text-red-600 text-2xl">R</span>
                 </div>
-                <div className="font-poppins cards-container flex flex-wrap justify-center gap-5">
-                    {/* Card Roleta */}
-                    <div className="card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-xs">
-                        <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
-                            <span className="text-red-600 text-2xl font-Unbounded">R</span>
-                        </div>
-                        <h2 className="text-xl  font-Unbounded mb-2">Roleta</h2>
-                        <p className="font-poppins text-sm ">A roleta de cores oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 14x. A roleta gira, escolha sua cor e boa sorte!</p>
-                        <a href="#" className="learn-more text-red-600 mt-3 text-sm font-Unbounded">LEARN MORE</a>
-                    </div>
-                    
-                    {/* Card Quiz */}
-                    <div className="font-poppins card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-xs">
-                        <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
-                            <img src="quiz logo site.svg" alt="Quiz Logo" className="h-9" />
-                        </div>
-                        <h2 className="text-xl font-light font-Unbounded mb-2">Quiz</h2>
-                        <p className="text-sm font-Montserrat">Desafie seus conhecimentos sobre Fórmula 1 neste quiz emocionante! Responda perguntas rápidas e acumule pontos para se tornar um verdadeiro especialista.</p>
-                        <a href="#" className="learn-more text-red-600 mt-3 text-sm font-Unbounded">LEARN MORE</a>
-                    </div>
-                    
-                    {/* Card Bet */}
-                    <div className="font-unbounded card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-xs">
-                        <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
-                            <img src="bet logo site.svg" alt="Bet Logo" className="h-9" />
-                        </div>
-                        <h2 className="text-xl font-light font-Unbounded mb-2">Bet</h2>
-                        <p className="text-sm font-Montserrat">Escolha o piloto vencedor da próxima corrida de Fórmula E e ganhe pontos para se destacar no ranking!</p>
-                        <a href="#" className="learn-more text-red-600 mt-3 text-sm font-Unbounded">LEARN MORE</a>
-                    </div>
+                <h2 className="text-xl font-unbounded mb-2">Roleta</h2>
+                <p className="font-poppins text-sm">A roleta de cores oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 14x. A roleta gira, escolha sua cor e boa sorte!</p>
+                <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
+            </div>
+
+            {/* Card Quiz */}
+            <div className="card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-sm">
+                <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
+                    <img src="quiz logo site.svg" alt="Quiz Logo" className="h-9" />
                 </div>
-            </section>
+                <h2 className="text-xl font-light font-unbounded mb-2">Quiz</h2>
+                <p className="text-sm font-poppins">Desafie seus conhecimentos sobre Fórmula 1 neste quiz emocionante! Responda perguntas rápidas e acumule pontos para se tornar um verdadeiro especialista.</p>
+                <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
+            </div>
 
-            {/* Loja Section */}
-            <section className="loja text-center py-5" id="loja">
-                <div className="title-container mb-5 flex justify-between items-center">
-                    <h1 className="text-3xl font-light font-Unbounded mb-4">Loja</h1>
-                    <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center">
-                        VER TODA A LOJA
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-                        </svg>
-                    </a>
+            {/* Card Bet */}
+            <div className="card bg-gray-800 rounded-lg p-5 text-left flex flex-col justify-between max-w-sm">
+                <div className="icon bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center mb-5">
+                    <img src="bet logo site.svg" alt="Bet Logo" className="h-9" />
                 </div>
-                <div className="products-container flex flex-wrap gap-5 justify-center">
-                    {/* Produto Camiseta */}
-                    <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
-                        <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-48 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-xl font-light font-Unbounded mt-2">Camiseta</h2>
-                            <p className="text-sm font-Montserrat">Camiseta, Formula E 2024</p>
-                        </div>
-                    </div>
+                <h2 className="text-xl font-light font-unbounded mb-2">Bet</h2>
+                <p className="text-sm font-poppins">Escolha o piloto vencedor da próxima corrida de Fórmula E e ganhe pontos para se destacar no ranking!</p>
+                <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
 
-                    {/* Produto PS5 */}
-                    <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
-                        <img src="Ps5 Loja C.png" alt="PS5" className="mb-5 rounded-lg w-full h-48 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-xl font-light font-Unbounded mt-2">PS5</h2>
-                            <p className="text-sm font-Montserrat">Console Sony Playstation 5, PS5 825gb</p>
-                        </div>
-                    </div>
-
-                    {/* Produto Ingresso */}
-                    <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
-                        <img src="Ingresso Loja C.png" alt="Ingresso Formula E" className="mb-5 rounded-lg w-full h-48 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-xl font-light font-Unbounded mt-2">Ingresso Formula E</h2>
-                            <p className="text-sm font-Montserrat">Ingresso para Formula E, Corrida 2024</p>
-                        </div>
-                    </div>
-
-                    {/* Produto Boné */}
-                    <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
-                        <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-48 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-xl font-light font-Unbounded mt-2">Boné Mahindra</h2>
-                            <p className="text-sm font-Montserrat">Boné de equipe Mahindra 2024</p>
-                        </div>
-                    </div>
+    {/* Loja Section */}
+    <section className="loja text-center py-5" id="loja">
+        <div className="title-container mb-5 flex flex-col justify-center items-center">
+            <h1 className="text-3xl font-unbounded mb-4">Loja</h1>
+            <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
+                VER TODA A LOJA
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                </svg>
+            </a>
+        </div>
+        <div className="products-container flex flex-wrap gap-8 justify-center">
+            {/* Produto Camiseta */}
+            <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
+                <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-48 object-cover" />
+                <div className="product-info text-left">
+                    <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                    <h2 className="text-xl font-light font-unbounded mt-2">Camiseta</h2>
+                    <p className="text-sm font-poppins">Camiseta, Formula E 2024</p>
                 </div>
-            </section>
+            </div>
+
+            {/* Produto PS5 */}
+            <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
+                <img src="Ps5 Loja C.png" alt="PS5" className="mb-5 rounded-lg w-full h-48 object-cover" />
+                <div className="product-info text-left">
+                    <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                    <h2 className="text-xl font-light font-unbounded mt-2">PS5</h2>
+                    <p className="text-sm font-poppins">Console Sony Playstation 5, PS5 825gb</p>
+                </div>
+            </div>
+
+            {/* Produto Ingresso */}
+            <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
+                <img src="Ingresso Loja C.png" alt="Ingresso Formula E" className="mb-5 rounded-lg w-full h-48 object-cover" />
+                <div className="product-info text-left">
+                    <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                    <h2 className="text-xl font-light font-unbounded mt-2">Ingresso Formula E</h2>
+                    <p className="text-sm font-poppins">Ingresso para Formula E, Corrida 2024</p>
+                </div>
+            </div>
+
+            {/* Produto Boné */}
+            <div className="product bg-gray-800 rounded-lg p-12 text-center flex flex-col justify-between max-w-xs">
+                <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-48 object-cover" />
+                <div className="product-info text-left">
+                    <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                    <h2 className="text-xl font-light font-unbounded mt-2">Boné Mahindra</h2>
+                    <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
         </main>
     );
 }
