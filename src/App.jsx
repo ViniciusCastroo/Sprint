@@ -1,17 +1,18 @@
-
+import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
 
 function App() {
 
   return (
     <>
-      <Header/>
-      <Home/>
-      <Footer/>
-    </>
-  )
+    <Header />
+    <Outlet /> {/* Este componente renderiza os elementos das rotas filhas */}
+    <Footer />
+  </>
+);
 }
+
+
 
 export default App
