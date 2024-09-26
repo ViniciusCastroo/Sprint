@@ -2,6 +2,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import FAQ from './components/Faq';
 
 function App() {
 
@@ -9,7 +10,11 @@ function App() {
     <>
       <Header/>
       <Home/>
+      <br/>
+      <FAQ/>
+      <br/>
       <Footer/>
+     
     </>
   )
 }
