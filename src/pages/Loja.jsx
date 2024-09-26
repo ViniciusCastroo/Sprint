@@ -10,7 +10,7 @@ export default function Home() {
 
         {/* Loja Section */}
         <section className="loja text-center py-5" id="loja">
-
+            <h1></h1>
         </section>
 
         </main>
