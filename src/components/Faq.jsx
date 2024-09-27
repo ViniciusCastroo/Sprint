@@ -10,7 +10,7 @@ const FAQ = () => {
   return (
     <div>
       <div className="flex flex-col items-center text-white text-center mb-8">
-        <p className="bg-gray-900 py-2 px-4 text-lg font-semibold text-red-600 rounded-lg w-1/3">
+        <p className=" bg-customGray py-2 px-4 text-lg font-semibold text-red-600 rounded-lg w-1/3">
           PERGUNTAS FREQUENTES
         </p>
         <h4 className="text-4xl font-medium mt-2 w-1/3">
@@ -19,7 +19,7 @@ const FAQ = () => {
       </div>
 
       <ul className="mx-auto w-1/2 space-y-6">
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className=" bg-customGray p-4 rounded-lg">
           <input type="radio" name="objetivo" id="primeiro" className="hidden" />
           <label
             className="flex justify-between items-center cursor-pointer text-lg font-medium"
@@ -45,7 +45,7 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className=" bg-customGray p-4 rounded-lg">
           <input type="radio" name="objetivo" id="segundo" className="hidden" />
           <label
             className="flex justify-between items-center cursor-pointer text-lg font-medium"
@@ -71,7 +71,7 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className=" bg-customGray p-4 rounded-lg">
           <input type="radio" name="objetivo" id="terceiro" className="hidden" />
           <label
             className="flex justify-between items-center cursor-pointer text-lg font-medium"
@@ -96,7 +96,7 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className=" bg-customGray p-4 rounded-lg">
           <input type="radio" name="objetivo" id="quarto" className="hidden" />
           <label
             className="flex justify-between items-center cursor-pointer text-lg font-medium"

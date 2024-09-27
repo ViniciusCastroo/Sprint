@@ -67,7 +67,7 @@ export default function Home() {
                     </svg>
                 </a>
             </div>
-            <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+            <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-1 justify-items-center">
                 {/* Produto Camiseta */}
                 <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
                     <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
@@ -109,6 +109,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
+
 
         
 
