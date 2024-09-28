@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 
 
@@ -13,6 +14,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
+      { index: true, element: <Login />},
+      { index: true, element: "Login.jsx"},
     ],
   },
 ]);
