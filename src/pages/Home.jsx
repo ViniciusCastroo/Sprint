@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -33,7 +33,7 @@ export default function Home() {
                         <h2 className="text-xl font-unbounded mb-2">Roleta</h2>
                         <p className="font-poppins text-sm">A roleta de cores oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 14x. A roleta gira, escolha sua cor e boa sorte!</p>
                         <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
-                        <a href="/roleta" className="text-red-600 mt-3 text-sm font-unbounded">Jogar Roleta</a>
+                        <NavLink to="/double" className="text-red-600 mt-3 text-sm font-unbounded">Jogar Double</NavLink>
                     </div>
 
                     {/* Card Quiz */}
@@ -111,7 +111,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
         </main>
     );
 }

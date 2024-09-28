@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Home from './pages/Home';
-import Roleta from './pages/Roleta'; // Importe a nova página da roleta
+import Double from './pages/Double';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> }, // Rota principal
-      { path: 'roleta', element: <Roleta /> }, // Nova rota para a roleta
+      { path: 'double', element: <Double /> }, // Nova rota para a roleta
     ],
   },
 ]);
