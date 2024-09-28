@@ -1,9 +1,9 @@
 const Footer = () => {
     return (
         <footer className="bg-[#111111a4] py-10 text-white font-Unbounded">
-            <div className="footer-container flex flex-wrap justify-between">
+            <div className="footer-container grid grid-cols-1 md:grid-cols-3 gap-5">
                 {/* Seção de Contato */}
-                <div className="contact-form bg-[#400000] rounded-lg p-5 flex-1 mr-5">
+                <div className="contact-form bg-[#400000] rounded-lg p-5">
                     <form id="contactForm" className="flex flex-col">
                         <input type="text" id="name" placeholder="Nome" required className="bg-[#5a0000] border-none rounded-md text-white mb-2 p-2" />
                         <input type="text" id="phone" placeholder="Telefone" required className="bg-[#5a0000] border-none rounded-md text-white mb-2 p-2" />
@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
 
                 {/* Links do Footer */}
-                <div className="footer-links flex justify-evenly flex-1">
+                <div className="footer-links flex flex-col md:flex-row justify-evenly">
                     <div>
                         <h3 className="mb-2">Menu</h3>
                         <ul className="list-none p-0 flex flex-col">
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
 
                 {/* Redes Sociais */}
-                <div className="social-media flex flex-col items-center flex-1">
+                <div className="social-media flex flex-col items-center">
                     <h3 className="mb-2 font-Montserrat">Siga-nos:</h3>
                     <div className="icons flex justify-center mb-5">
                         <a href="#"><img src="tiktok.svg" alt="Tiktok" className="w-10 h-10 mx-2" /></a>

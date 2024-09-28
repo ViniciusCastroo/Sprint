@@ -1,12 +1,16 @@
-import { useState, useEffect } from 'react';
-import './Double.css'; // Certifique-se de ter o CSS correto
+import { useState, useEffect, useMemo } from 'react';
+import './Double.css';
+
 const Double = () => {
   const [escolhaJogador, setEscolhaJogador] = useState(null);
   const [girando, setGirando] = useState(false);
   const [resultado, setResultado] = useState(null);
   const [mensagemResultado, setMensagemResultado] = useState('');
-  const cores = ['Preto', 'Vermelho', 'Branco', 'Preto', 'Vermelho', 'Branco', 'Preto', 'Vermelho', 'Branco', 'Preto', 'Vermelho', 'Branco']; // Sequência de cores
-  
+  const [, setPosicaoFinal] = useState();
+
+  const cores = useMemo(() => ['Preto', 'Vermelho', 'Branco', 'Preto', 'Vermelho', 'Branco', 'Preto', 'Vermelho', 'Branco'], []);
+
+  useEffect(() => {
     const verificarResultado = () => {
       if (resultado !== null) {
         if (cores[resultado] === escolhaJogador) {
@@ -17,22 +21,31 @@ const Double = () => {
       }
     };
 
-  useEffect(() => {
     if (resultado !== null) {
       verificarResultado();
     }
-  }, [resultado, verificarResultado]);
+  }, [resultado, escolhaJogador, cores]);
 
   const iniciarRodada = () => {
     if (!girando) {
       setGirando(true);
       setMensagemResultado('');
 
+      const rodadas = 5; // Número de rodadas completas antes de parar
+      const totalQuadrados = cores.length;
+      const quadradoVisivelNoCentro = 1; // Índice que representa o quadrado que ficará no centro
+
+      const resultadoFinal = Math.floor(Math.random() * totalQuadrados);
+
+      // Calcula a posição final de forma que o quadrado "resultadoFinal" caia no centro da tela
+      const posicaoFinalCalculada = (rodadas * totalQuadrados + resultadoFinal) - quadradoVisivelNoCentro;
+
+      setPosicaoFinal(posicaoFinalCalculada); // Define a posição final da animação
+
       setTimeout(() => {
-        const resultadoFinal = Math.floor(Math.random() * cores.length);
-        setResultado(resultadoFinal);
+        setResultado(resultadoFinal); // Define o resultado final
         setGirando(false);
-      }, 4000); // Tempo de rotação
+      }, 5000); // Duração da animação
     }
   };
 
@@ -57,7 +70,7 @@ const Double = () => {
           Vermelho
         </button>
         <button
-          className={`botao-escolha  ${escolhaJogador === 'Branco' ? 'selecionado' : ''}`}
+          className={`botao-escolha ${escolhaJogador === 'Branco' ? 'selecionado' : ''}`}
           onClick={() => setEscolhaJogador('Branco')}
           disabled={girando}
           style={{ backgroundColor: 'white', color: 'black' }}
@@ -75,17 +88,32 @@ const Double = () => {
           <div
             className={`cores ${girando ? 'girando' : ''}`}
             style={{
-              transform: resultado !== null ? `translateX(-${resultado * 100}px)` : 'translateX(0)',
+              transform: girando ? `translateX(-${Math.random() * 2000}px)` : 'translateX(0)',
+              transition: 'transform 5s cubic-bezier(0.25, 0.1, 0.25, 1)',
+            }}
+            onTransitionEnd={() => {
+              
+              const totalQuadrados = cores.length;
+              const resultadoFinal = Math.floor(Math.random() * totalQuadrados);
+              setResultado(resultadoFinal);
+              if (cores[resultadoFinal] === escolhaJogador) {
+                setMensagemResultado('Você ganhou!');
+              } else {
+                setMensagemResultado('Você perdeu!');
+              }
+              setGirando(false);
             }}
           >
-            {cores.map((cor, index) => (
+            {Array(3).fill(cores).flat().map((cor, index) => (
               <div key={index} className={`quadrado ${cor.toLowerCase()}`}>
                 {cor}
               </div>
             ))}
           </div>
         </div>
-        <div className="quadrado-contorno"></div>
+
+        {/* Linha central para mostrar o quadrado selecionado */}
+        <div className="linha-central"></div>
       </div>
 
       <h2 className="resultado">{mensagemResultado}</h2>
