@@ -6,16 +6,13 @@ import App from './App';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
-
-
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <App />, // Este é o layout principal que envolve as outras páginas
     children: [
-      { index: true, element: <Home /> },
-      { index: true, element: <Login />},
-      { index: true, element: "Login.jsx"},
+      { index: true, element: <Home /> }, // Página Home
+      { path: 'login', element: <Login /> }, // Página Login
     ],
   },
 ]);

@@ -1,6 +1,11 @@
+import React from 'react';
+import Slide from '../components/Slide'; // Importando o Slide
+
 export default function Home() {
     return (
         <main className="bg-black text-white">
+          
+
             {/* Hero Section */}
             <section className="font-unbounded hero flex flex-col items-center justify-center text-center py-12 bg-gradient-to-b from-black via-black to-red-600 min-h-screen relative overflow-hidden">
                 <div className="content relative z-10 max-w-2xl mt-[-200px]">
@@ -55,67 +60,66 @@ export default function Home() {
                 </div>
             </section>
 
-        {/* Loja Section */}
-        <section className="loja text-center py-5" id="loja">
-            <div className="title-container mb-5 flex flex-col justify-center items-center">
-                <h1 className="text-4xl font-unbounded mb-4">Loja</h1>
-                <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
-                    VER TODA A LOJA
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-                    </svg>
-                </a>
-            </div>
-            <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-1 justify-items-center">
-                {/* Produto Camiseta */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                    <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                    <div className="product-info text-left">
-                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                        <h2 className="text-2xl font-light font-unbounded mt-2">Camiseta</h2>
-                        <p className="text-sm font-poppins">Camiseta, Formula E 2024</p>
+            {/* Loja Section */}
+            <section className="loja text-center py-5" id="loja">
+                <div className="title-container mb-5 flex flex-col justify-center items-center">
+                    <h1 className="text-4xl font-unbounded mb-4">Loja</h1>
+                    <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
+                        VER TODA A LOJA
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                        </svg>
+                    </a>
+                </div>
+                <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-1 justify-items-center">
+                    {/* Produto Camiseta */}
+                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                        <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                        <div className="product-info text-left">
+                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                            <h2 className="text-2xl font-light font-unbounded mt-2">Camiseta</h2>
+                            <p className="text-sm font-poppins">Camiseta, Formula E 2024</p>
+                        </div>
+                    </div>
+
+                    {/* Produto PS5 */}
+                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                        <img src="Ps5 Loja C.png" alt="PS5" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                        <div className="product-info text-left">
+                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                            <h2 className="text-2xl font-light font-unbounded mt-2">PS5</h2>
+                            <p className="text-sm font-poppins">Console Sony Playstation 5, PS5 825gb</p>
+                        </div>
+                    </div>
+
+                    {/* Produto Ingresso */}
+                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                        <img src="Ingresso Loja C.png" alt="Ingresso Formula E" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                        <div className="product-info text-left">
+                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                            <h2 className="text-2xl font-light font-unbounded mt-2">Ingresso Formula E</h2>
+                            <p className="text-sm font-poppins">Ingresso para Formula E, Corrida 2024</p>
+                        </div>
+                    </div>
+
+                    {/* Produto Boné */}
+                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                        <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                        <div className="product-info text-left">
+                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                            <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
+                            <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                {/* Produto PS5 */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                    <img src="Ps5 Loja C.png" alt="PS5" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                    <div className="product-info text-left">
-                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                        <h2 className="text-2xl font-light font-unbounded mt-2">PS5</h2>
-                        <p className="text-sm font-poppins">Console Sony Playstation 5, PS5 825gb</p>
-                    </div>
-                </div>
-
-                {/* Produto Ingresso */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                    <img src="Ingresso Loja C.png" alt="Ingresso Formula E" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                    <div className="product-info text-left">
-                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                        <h2 className="text-2xl font-light font-unbounded mt-2">Ingresso Formula E</h2>
-                        <p className="text-sm font-poppins">Ingresso para Formula E, Corrida 2024</p>
-                    </div>
-                </div>
-
-                {/* Produto Boné */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                    <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                    <div className="product-info text-left">
-                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                        <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
-                        <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        
-
+              {/* Slide Section */}
+              <section className="slide-section">
+                <Slide /> {/* Slide inserido aqui, apenas na página Home */}
+            </section>
+            
         </main>
-
-        
     );
 }
-
