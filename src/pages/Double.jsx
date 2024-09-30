@@ -31,21 +31,21 @@ const Double = () => {
       setGirando(true);
       setMensagemResultado('');
 
-      const rodadas = 5; // Número de rodadas completas antes de parar
+      
       const totalQuadrados = cores.length;
-      const quadradoVisivelNoCentro = 1; // Índice que representa o quadrado que ficará no centro
+      const quadradoVisivelNoCentro = 1; 
 
       const resultadoFinal = Math.floor(Math.random() * totalQuadrados);
 
-      // Calcula a posição final de forma que o quadrado "resultadoFinal" caia no centro da tela
-      const posicaoFinalCalculada = (rodadas * totalQuadrados + resultadoFinal) - quadradoVisivelNoCentro;
+      
+      const posicaoFinalCalculada = ( totalQuadrados + resultadoFinal) - quadradoVisivelNoCentro;
 
-      setPosicaoFinal(posicaoFinalCalculada); // Define a posição final da animação
+      setPosicaoFinal(posicaoFinalCalculada); 
 
       setTimeout(() => {
-        setResultado(resultadoFinal); // Define o resultado final
+        setResultado(resultadoFinal); 
         setGirando(false);
-      }, 5000); // Duração da animação
+      }, 5000); 
     }
   };
 

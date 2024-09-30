@@ -25,13 +25,13 @@ export default function Home() {
                     <h1 className="font-unbounded text-3xl font-light">Jogos</h1>
                 </div>
                 <div className="font-poppins cards-container flex flex-wrap justify-center gap-8">
-                    {/* Card Roleta */}
+                    {/* Card Double */}
                     <div className="card bg-customGray rounded-lg p-5 text-left flex flex-col justify-between max-w-sm">
                         <div className="icon bg-black rounded-full w-12 h-12 flex items-center justify-center mb-5">
                             <span className="text-red-600 text-2xl">R</span>
                         </div>
-                        <h2 className="text-xl font-unbounded mb-2">Roleta</h2>
-                        <p className="font-poppins text-sm">A roleta de cores oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 14x. A roleta gira, escolha sua cor e boa sorte!</p>
+                        <h2 className="text-xl font-unbounded mb-2">Double</h2>
+                        <p className="font-poppins text-sm">O Double oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 5x. A roleta gira, escolha sua cor e boa sorte!</p>
                         <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
                         <NavLink to="/double" className="text-red-600 mt-3 text-sm font-unbounded">Jogar Double</NavLink>
                     </div>
