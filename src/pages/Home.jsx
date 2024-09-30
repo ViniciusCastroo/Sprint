@@ -62,13 +62,13 @@ export default function Home() {
         <section className="loja text-center py-5" id="loja">
             <div className="title-container mb-5 flex flex-col justify-center items-center">
                 <h1 className="text-4xl font-unbounded mb-4">Loja</h1>
-                <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
+                <NavLink to='/loja' className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
                     VER TODA A LOJA
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
                     </svg>
-                </a>
+                </NavLink>
             </div>
             <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
                 {/* Produto Camiseta */}
