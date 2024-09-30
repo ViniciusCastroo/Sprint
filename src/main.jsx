@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Home from './pages/Home';
+import Loja from './pages/Loja';
+import FAQ from './components/Faq';
 import Double from './pages/Double';
 
 const router = createBrowserRouter([
@@ -11,7 +13,9 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Home /> }, // Rota principal
+      { index: true, element: <Home /> }, // Página inicial
+      { path: 'loja', element: <Loja /> }, // Rota da loja
+      { path: 'faq', element: <FAQ /> },  // Rota FAQ
       { path: 'double', element: <Double /> }, // Nova rota para a roleta
     ],
   },
