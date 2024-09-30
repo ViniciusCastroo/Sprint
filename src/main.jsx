@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Loja from './pages/Loja';
 import FAQ from './components/Faq';
 import Double from './pages/Double';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> }, // Página inicial
       { path: 'loja', element: <Loja /> }, // Rota da loja
       { path: 'faq', element: <FAQ /> },  // Rota FAQ
+      { path: 'login', element: <Login /> }, // Página Login - Correção aqui
       { path: 'double', element: <Double /> }, // Nova rota para a roleta
     ],
   },

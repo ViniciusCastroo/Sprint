@@ -24,6 +24,12 @@ export default function Header() {
                                 Loja
                             </NavLink>
                         </li>
+                        <li className="ml-5 relative">
+                            <NavLink to="/login" className="text-white no-underline text-sm px-4 py-2 font-unbounded hover:text-red-500 transition-all ease-linear">
+                                Login
+                            </NavLink>
+                    </li>
+
                     </ul>
                 </nav>
             </div>
