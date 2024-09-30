@@ -1,6 +1,3 @@
-import React from 'react';
-import Slide from '../components/Slide'; // Importando o Slide
-
 export default function Home() {
     return (
         <main className="bg-black text-white">
@@ -28,14 +25,15 @@ export default function Home() {
                     <h1 className="font-unbounded text-3xl font-light">Jogos</h1>
                 </div>
                 <div className="font-poppins cards-container flex flex-wrap justify-center gap-8">
-                    {/* Card Roleta */}
+                    {/* Card Double */}
                     <div className="card bg-customGray rounded-lg p-5 text-left flex flex-col justify-between max-w-sm">
                         <div className="icon bg-black rounded-full w-12 h-12 flex items-center justify-center mb-5">
                             <span className="text-red-600 text-2xl">R</span>
                         </div>
-                        <h2 className="text-xl font-unbounded mb-2">Roleta</h2>
-                        <p className="font-poppins text-sm">A roleta de cores oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 14x. A roleta gira, escolha sua cor e boa sorte!</p>
+                        <h2 className="text-xl font-unbounded mb-2">Double</h2>
+                        <p className="font-poppins text-sm">O Double oferece pontos ao escolher a cor certa: Preto e Vermelho pagam 2x, enquanto Branco paga 5x. A roleta gira, escolha sua cor e boa sorte!</p>
                         <a href="#" className="learn-more text-red-600 mt-3 text-sm font-unbounded">LEARN MORE</a>
+                        <NavLink to="/double" className="text-red-600 mt-3 text-sm font-unbounded">Jogar Double</NavLink>
                     </div>
 
                     {/* Card Quiz */}
@@ -60,28 +58,28 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Loja Section */}
-            <section className="loja text-center py-5" id="loja">
-                <div className="title-container mb-5 flex flex-col justify-center items-center">
-                    <h1 className="text-4xl font-unbounded mb-4">Loja</h1>
-                    <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
-                        VER TODA A LOJA
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-                        </svg>
-                    </a>
-                </div>
-                <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-1 justify-items-center">
-                    {/* Produto Camiseta */}
-                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                        <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-2xl font-light font-unbounded mt-2">Camiseta</h2>
-                            <p className="text-sm font-poppins">Camiseta, Formula E 2024</p>
-                        </div>
+        {/* Loja Section */}
+        <section className="loja text-center py-5" id="loja">
+            <div className="title-container mb-5 flex flex-col justify-center items-center">
+                <h1 className="text-4xl font-unbounded mb-4">Loja</h1>
+                <a href="loja.html" className="ver-todos bg-red-600 text-white py-3 px-6 rounded-full text-sm font-light inline-flex items-center mb-6">
+                    VER TODA A LOJA
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="ml-2">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                    </svg>
+                </a>
+            </div>
+            <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+                {/* Produto Camiseta */}
+                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                    <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                    <div className="product-info text-left">
+                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                        <h2 className="text-2xl font-light font-unbounded mt-2">Camiseta</h2>
+                        <p className="text-sm font-poppins">Camiseta, Formula E 2024</p>
                     </div>
+                </div>
 
                     {/* Produto PS5 */}
                     <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
@@ -103,23 +101,20 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Produto Boné */}
-                    <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                        <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                        <div className="product-info text-left">
-                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                            <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
-                            <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
-                        </div>
+                {/* Produto Boné */}
+                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                    <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                    <div className="product-info text-left">
+                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                        <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
+                        <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-              {/* Slide Section */}
-              <section className="slide-section">
-                <Slide /> {/* Slide inserido aqui, apenas na página Home */}
-            </section>
-            
+        
+
         </main>
     );
 }

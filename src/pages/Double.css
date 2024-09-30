@@ -1,0 +1,196 @@
+.double-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.escolha-jogador {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.botao-escolha {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.selecionado {
+  border: 3px solid yellow;
+}
+
+.botao-girar {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+.quadrados-cores {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Ajuste máximo para desktop */
+  margin-top: 20px;
+}
+
+.container-animacao {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cores {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ajuste fixo para 5 colunas */
+  transition: transform 4s ease-out;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.preto {
+  background-color: black;
+}
+
+.vermelho {
+  background-color: red;
+}
+
+.branco {
+  background-color: white;
+  color: black;
+}
+
+/* Linha central fixa para indicar o resultado */
+.linha-central {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: yellow;
+  z-index: 10;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .botao-escolha {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .quadrado {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2rem;
+  }
+
+  .container-animacao {
+    max-width: 300px;
+  }
+
+  .cores {
+    grid-template-columns: repeat(4, 1fr); /* Ajuste fixo para 4 colunas */
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .botao-escolha {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .quadrado {
+    width: 70px;
+    height: 70px;
+    font-size: 1.1rem;
+  }
+
+  .container-animacao {
+    max-width: 250px;
+  }
+
+  .cores {
+    grid-template-columns: repeat(3, 1fr); /* Ajuste fixo para 3 colunas */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .botao-escolha {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  .quadrado {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .container-animacao {
+    max-width: 200px;
+  }
+
+  .cores {
+    grid-template-columns: repeat(2, 1fr); /* Ajuste fixo para 2 colunas */
+  }
+}
+.cores {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.quadrado {
+  flex: 0 0 auto;
+}
