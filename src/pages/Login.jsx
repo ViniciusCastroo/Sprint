@@ -18,15 +18,15 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-700 to-gray-200 flex items-center justify-center flex-col h-screen">
-      <main className="relative">
+    <div className="bg-gradient-to-r from-gray-700 to-gray-200 flex items-center justify-center h-screen">
+      <main className="relative w-full max-w-5xl">
         {/* Fundo com transição suave */}
         <div
           className={`absolute inset-0 transition-all duration-700 ease-in-out ${isLogin ? 'bg-black' : 'bg-red-700'} rounded-3xl`}
         />
-        <div className="container flex rounded-3xl shadow-lg relative overflow-hidden w-full max-w-5xl min-h-[480px] text-white p-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl shadow-lg overflow-hidden relative z-10">
           {/* Left side */}
-          <div className={`w-1/2 p-10 flex flex-col justify-center items-center ${isLogin ? 'bg-black' : 'bg-red-700'} rounded-l-3xl`}>
+          <div className={`p-10 flex flex-col justify-center items-center ${isLogin ? 'bg-black text-white' : 'bg-red-700 text-white'}`}>
             {isLogin ? (
               <>
                 <h1 className="text-3xl font-bold text-center">Faça login</h1>
@@ -52,7 +52,7 @@ const Login = () => {
           </div>
 
           {/* Right side */}
-          <div className={`w-1/2 p-10 flex flex-col justify-center items-center ${isLogin ? 'bg-red-700' : 'bg-black'} rounded-r-3xl`}>
+          <div className={`p-10 flex flex-col justify-center items-center ${isLogin ? 'bg-red-700 text-white' : 'bg-black text-white'}`}>
             {isLogin ? (
               <>
                 <h1 className="text-3xl font-bold text-center">Olá, corredor!</h1>
