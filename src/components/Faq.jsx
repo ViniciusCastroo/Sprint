@@ -8,9 +8,9 @@ const FAQ = () => {
   };
 
   return (
-    <div>
+    <div className="font-montserrat"> {/* Aplicando a fonte a todo o componente */}
       <div className="flex flex-col items-center text-white text-center mb-8">
-        <p className="bg-gray-900 py-2 px-4 text-lg font-semibold text-red-600 rounded-lg w-1/3">
+        <p className="bg-neutral-900 py-2 px-4 text-lg font-semibold text-red-600 rounded-lg w-1/3">
           PERGUNTAS FREQUENTES
         </p>
         <h4 className="text-4xl font-medium mt-2 w-1/3">
@@ -19,10 +19,10 @@ const FAQ = () => {
       </div>
 
       <ul className="mx-auto w-1/2 space-y-6">
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className="bg-neutral-900 p-4 rounded-lg">
           <input type="radio" name="objetivo" id="primeiro" className="hidden" />
           <label
-            className="flex justify-between items-center cursor-pointer text-lg font-medium"
+            className="flex justify-between items-center cursor-pointer text-lg font-bold"
             htmlFor="primeiro"
             onClick={() => toggle(1)}
           >
@@ -45,10 +45,10 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className="bg-neutral-900 p-4 rounded-lg">
           <input type="radio" name="objetivo" id="segundo" className="hidden" />
           <label
-            className="flex justify-between items-center cursor-pointer text-lg font-medium"
+            className="flex justify-between items-center cursor-pointer text-lg font-bold"
             htmlFor="segundo"
             onClick={() => toggle(2)}
           >
@@ -71,10 +71,10 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className="bg-neutral-900 p-4 rounded-lg">
           <input type="radio" name="objetivo" id="terceiro" className="hidden" />
           <label
-            className="flex justify-between items-center cursor-pointer text-lg font-medium"
+            className="flex justify-between items-center cursor-pointer text-lg font-bold"
             htmlFor="terceiro"
             onClick={() => toggle(3)}
           >
@@ -96,10 +96,10 @@ const FAQ = () => {
           </div>
         </li>
 
-        <li className="bg-gray-900 p-4 rounded-lg">
+        <li className="bg-neutral-900 p-4 rounded-lg">
           <input type="radio" name="objetivo" id="quarto" className="hidden" />
           <label
-            className="flex justify-between items-center cursor-pointer text-lg font-medium"
+            className="flex justify-between items-center cursor-pointer text-lg font-bold"
             htmlFor="quarto"
             onClick={() => toggle(4)}
           >
@@ -127,4 +127,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

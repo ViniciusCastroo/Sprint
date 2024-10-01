@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import FAQ from '../components/Faq'; // Importando o componente FAQ
 
 export default function Home() {
     return (
@@ -70,9 +71,9 @@ export default function Home() {
                     </svg>
                 </NavLink>
             </div>
-            <div className="products-container grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+            <div className="products-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
                 {/* Produto Camiseta */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                <div className="product bg-neutral-950  rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
                     <img src="Camiseta Loja C.png" alt="Camiseta" className="mb-5 rounded-lg w-full h-64 object-cover" />
                     <div className="product-info text-left">
                         <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
@@ -82,7 +83,7 @@ export default function Home() {
                 </div>
 
                 {/* Produto PS5 */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                <div className="product bg-neutral-950  rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
                     <img src="Ps5 Loja C.png" alt="PS5" className="mb-5 rounded-lg w-full h-64 object-cover" />
                     <div className="product-info text-left">
                         <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
@@ -92,7 +93,7 @@ export default function Home() {
                 </div>
 
                 {/* Produto Ingresso */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
+                <div className="product bg-neutral-950  rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
                     <img src="Ingresso Loja C.png" alt="Ingresso Formula E" className="mb-5 rounded-lg w-full h-64 object-cover" />
                     <div className="product-info text-left">
                         <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
@@ -100,18 +101,23 @@ export default function Home() {
                         <p className="text-sm font-poppins">Ingresso para Formula E, Corrida 2024</p>
                     </div>
                 </div>
-
+                
                 {/* Produto Boné */}
-                <div className="product bg-black rounded-lg p-12 text-center flex flex-col justify-between max-w-sm">
-                    <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
-                    <div className="product-info text-left">
-                        <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
-                        <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
-                        <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
+                <div className="products-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center"></div>
+                    <div className='product bg-neutral-950  rounded-lg p-12 text-center'>
+                        <img src="Bone Loja C.png" alt="Boné Mahindra" className="mb-5 rounded-lg w-full h-64 object-cover" />
+                        <div className="product-info text-left">
+                            <span className="category bg-red-600 text-white px-3 py-1 rounded-full text-sm">Loja</span>
+                            <h2 className="text-2xl font-light font-unbounded mt-2">Boné Mahindra</h2>
+                            <p className="text-sm font-poppins">Boné de equipe Mahindra 2024</p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section> 
+
+            {/* FAQ Section */}
+            <FAQ /> {/* Aqui está o componente FAQ adicionado à Home */}
+            <br/>
         </main>
     );
 }

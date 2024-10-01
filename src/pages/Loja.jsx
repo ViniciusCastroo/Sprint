@@ -7,7 +7,10 @@ import boneLoja from '../assets/Bone Loja C.png';
 import ps5Loja from '../assets/Ps5 Loja C.png';
 import caderno01 from '../assets/caderno01.png';
 import moedaIcon from '../assets/moeda-loja.png';
-import '../home.css'
+import chaveiroLoja from '../assets/chaveiro-sprint-removebg-preview.png'
+import copoLoja from '../assets/copo-sprint-removebg-preview.png'
+import garrafaLoja from '../assets/garrafa-sprint-removebg-preview.png'
+import '../barra-de-navegacao.css'
 
 export default function Home() {
   const [saldo, setSaldo] = useState(1000);
@@ -17,9 +20,9 @@ export default function Home() {
     { id: 2, nome: 'Ingresso', preco: 5000, img: ingressoLoja },
     { id: 3, nome: 'Boné 2024', preco: 500, img: boneLoja },
     { id: 4, nome: 'Ps5', preco: 100000, img: ps5Loja },
-    { id: 5, nome: 'Copo Térmico', preco: 550, img: '' },
-    { id: 6, nome: 'Garrafa Térmica', preco: 750, img: '' },
-    { id: 7, nome: 'Chaveiro', preco: 150, img: '' },
+    { id: 5, nome: 'Copo Térmico', preco: 550, img: copoLoja },
+    { id: 6, nome: 'Garrafa Térmica', preco: 750, img: garrafaLoja },
+    { id: 7, nome: 'Chaveiro', preco: 150, img: chaveiroLoja },
     { id: 8, nome: 'Caderno', preco: 250, img: caderno01 },
   ];
 
